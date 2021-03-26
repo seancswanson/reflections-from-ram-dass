@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+@font-face
+{
+    font-family: 'NewAthenaUnicode';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./assets/fonts/NewAthenaUnicode.ttf.woff') format('woff'),
+    url('./assets/fonts/NewAthenaUnicode.ttf.svg') format('svg'),
+    url('./assets/fonts/NewAthenaUnicode.ttf.eot'),
+    url('./assets/fonts/NewAthenaUnicode.ttf.eot?#iefix') format('embedded-opentype');
+}
+
+body
+{
+    font-family: 'NewAthenaUnicode';
+
+    height: 100%;
+}
