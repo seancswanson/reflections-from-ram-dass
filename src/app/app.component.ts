@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuoteService } from './services/quote.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reflections-with-ram-dass';
+  quote$;
+  constructor(private quoteService: QuoteService) {
+
+  }
+
+  getQuoteClickHandler() {
+    this.quoteService.getAllQuotes();
+  }
 }
