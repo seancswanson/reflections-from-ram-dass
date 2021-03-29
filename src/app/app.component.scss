@@ -1,9 +1,35 @@
-:host
-{
-    display: grid;
+:host {
+  display: grid;
 
-    min-height: 100vh;
+  min-height: 100vh;
+  background-color: #485d69;
 
-    grid-template-columns: 100vw;
-    grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr;
+  // grid-template-rows: 60px 1fr 60px;
+
+  color: #f8f8ff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title-top {
+  margin-bottom: 5px;
+}
+.title-bottom {
+  display: flex;
+  margin-top: 0;
+
+  .title-from {
+    font-family: "Homemade Apple", cursive;
+    font-size: 0.9em;
+    min-width: 80px;
+    margin-right: 10px;
+  }
+  .title-ram-dass {
+    font-size: 2em;
+  }
 }

@@ -1,19 +1,11 @@
-import { Component } from '@angular/core';
-import { QuoteService } from './services/quote.service';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = 'reflections-with-ram-dass';
-  quote$;
-  constructor(private quoteService: QuoteService) {
-
-  }
-
-  getQuoteClickHandler() {
-    this.quoteService.getAllQuotes();
-  }
+  title = "reflections-with-ram-dass";
+  constructor() {}
 }
