@@ -2,17 +2,17 @@
   display: grid;
 
   min-height: 100vh;
-  background-color: #485d69;
+  background-color: #003d5a;
 
   grid-template-columns: 100vw;
-  grid-template-rows: 1fr;
-  // grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: 1fr 40px;
 
   color: #f8f8ff;
 }
 
 main {
   max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
 }
 

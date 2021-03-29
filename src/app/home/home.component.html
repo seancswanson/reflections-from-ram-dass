@@ -1,3 +1,14 @@
-<p *ngIf="displayedQuote">{{ displayedQuote.text }}</p>
-
-<button (click)="getQuoteClickHandler('love')">Get A Quote</button>
+<div *ngIf="displayedQuote" class="result-container">
+  <div class="result-category-wrapper">
+    {{ getCategorySentencePrefix() }}
+    <em class="result-category">{{ displayedQuote.category }} -</em>
+  </div>
+  <div class="result-quote-card-wrapper">
+    <div class="text">
+      <p>“{{ displayedQuote.text }}”</p>
+    </div>
+  </div>
+</div>
+<button class="button" (click)="getQuoteClickHandler('love')">
+  Get A Quote
+</button>

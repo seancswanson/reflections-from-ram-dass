@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
 import { QuoteService } from "../services/quote.service";
 import { Quote } from "./quote.interface";
 @Component({
@@ -9,6 +10,14 @@ import { Quote } from "./quote.interface";
 export class HomeComponent implements OnInit {
   allQuotes: Quote[];
   displayedQuote: Quote;
+  categorySentencePrefixes = [
+    "In regards to",
+    "On",
+    "Concerning",
+    "As it relates to",
+    "About",
+  ];
+  categorySentencePrefix: string;
 
   constructor(private quoteService: QuoteService) {}
 
@@ -16,6 +25,9 @@ export class HomeComponent implements OnInit {
     const allQuotes$ = this.quoteService
       .getAllQuotes()
       .subscribe((res) => (this.allQuotes = res));
+    this.categorySentencePrefix = this.categorySentencePrefixes[
+      this.getRandomIndex(this.categorySentencePrefixes)
+    ];
   }
 
   getQuoteClickHandler(selectedCategory) {
@@ -24,5 +36,13 @@ export class HomeComponent implements OnInit {
     );
     const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
     this.displayedQuote = filteredQuotes[randomIndex];
+  }
+
+  getRandomIndex(arr?) {
+    return Math.floor(Math.random() * (arr.length || 1));
+  }
+
+  getCategorySentencePrefix() {
+    return this.categorySentencePrefix;
   }
 }
