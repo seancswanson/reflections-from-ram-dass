@@ -1,0 +1,98 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maharaji-ram-dass-portrait {
+  box-shadow: rgb(255 255 255 / 5%) 0px 50px 100px -20px,
+    rgb(255 253 253 / 17%) 0px 30px 60px -30px,
+    rgb(10 37 64 / 25%) 0px -2px 6px 26px inset;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 30vw;
+  min-width: 500px;
+  height: auto;
+  transition: width 1s ease;
+  @media (max-width: 600px) {
+    width: 70vw;
+    min-width: initial;
+  }
+}
+
+.information-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.acknowledgement {
+  font-size: 22px;
+}
+
+.ram-dass-foundations-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.ram-dass-foundation-wrapper {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px dotted rgba(255, 255, 255, 0.3);
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &#ram-dass-foundation {
+      background-image: url(../../assets/ram-dass-love-serve-remember-foundation-logo-stacked-800x800px-web.png);
+    }
+
+    &#hanuman-foundation {
+      background-image: url(../../assets/Hanuman_Logo-LR.gif);
+    }
+
+    &#seva-foundation {
+      background-image: url(../../assets/seva_logo_352x158.png);
+    }
+  }
+}
+
+.return-button-wrapper {
+  position: absolute;
+  top: 50px;
+  text-align: right;
+  width: 93vw;
+  max-width: 1000px;
+
+  @media (max-width: 550px) {
+    position: initial;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.button {
+  @media (max-width: 550px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

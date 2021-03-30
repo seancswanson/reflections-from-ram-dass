@@ -1,10 +1,29 @@
 :host {
-  background: #364650;
   display: flex;
+  background: #007f96;
+  justify-content: center;
   align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-p {
+.footer-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 75%;
+}
+
+a {
+  font-size: 18px;
   padding: 0 10px;
   margin: 0;
+  color: #f8f8ff;
+}
+
+.curated-text {
+  opacity: 0.9;
+  text-decoration: none;
 }

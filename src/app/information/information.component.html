@@ -1,1 +1,64 @@
-<a [routerLink]="['/']">Return</a>
+<h1>In loving awareness...</h1>
+<div class="portait-wrapper">
+  <img
+    class="maharaji-ram-dass-portrait"
+    width="526"
+    height="331"
+    src="../assets/Neem-Karoli-Baba-Baba-Ram-Dass_s.jpg"
+    alt="Neem Karoli Baba and Baba Ram Dass"
+  />
+</div>
+
+<div class="information-text-wrapper">
+  <p>
+    Welcome to Reflections from Ram Dass! This site was developed to honor the
+    legacy and message of Baba Ram Dass the Spiritual teacher, psychedelic & end
+    of life pioneer, and author of Be Here Now. All quotes were sourced from
+    <a class="light-link" href="https://www.ramdass.org/"
+      >https://www.ramdass.org/.</a
+    >
+  </p>
+  <p class="acknowledgement">
+    <em
+      >This web app was developed independently for educational purposes and is
+      not affiliated with Ram Dass or the foundations mentioned.</em
+    >
+    🌞
+    <em>
+      For the technically inclined,
+      <a class="light-link" [routerLink]="['tech']">tap here.</a></em
+    >
+  </p>
+  <p>
+    I encourage you to learn more about Ram Dass and the foundations that have
+    been carrying out deep and meaningful work for over 40 years. If you hear
+    the words and are moved by the mission, consider donating to one of these
+    foundations.
+  </p>
+</div>
+<div class="ram-dass-foundations-container">
+  <div class="ram-dass-foundation-wrapper">
+    <a
+      class="foundation-logo"
+      id="ram-dass-foundation"
+      href="https://www.ramdass.org/"
+    ></a>
+  </div>
+  <div class="ram-dass-foundation-wrapper">
+    <a
+      class="foundation-logo"
+      id="hanuman-foundation"
+      href="https://www.hanuman-foundation.org/"
+    ></a>
+  </div>
+  <div class="ram-dass-foundation-wrapper">
+    <a
+      class="foundation-logo"
+      id="seva-foundation"
+      href="https://www.seva.org/"
+    ></a>
+  </div>
+</div>
+<div class="return-button-wrapper">
+  <a class="button" [routerLink]="['/']">Return</a>
+</div>

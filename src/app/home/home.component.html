@@ -5,10 +5,15 @@
   </div>
   <div class="result-quote-card-wrapper">
     <div class="text">
-      <p>“{{ displayedQuote.text }}”</p>
+      <p>
+        <span class="smart-quote left">“</span>{{ displayedQuote.text
+        }}<span class="smart-quote right">”</span>
+      </p>
     </div>
   </div>
 </div>
-<button class="button" (click)="getQuoteClickHandler('love')">
-  Get A Quote
-</button>
+<div class="quote-button-wrapper">
+  <button class="button" (click)="getQuoteClickHandler('inspiration')">
+    Get Another Ram Dass Quote ▾
+  </button>
+</div>

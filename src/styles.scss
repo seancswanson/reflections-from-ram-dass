@@ -12,10 +12,18 @@
       format("embedded-opentype");
 }
 
+html {
+  background-color: #007f96;
+}
+
 body {
   font-family: "NewAthenaUnicode";
 
   height: 100%;
+}
+
+.light-link {
+  color: #f8f8ff;
 }
 
 .button {
@@ -28,7 +36,7 @@ body {
   vertical-align: middle;
   margin: 0 0 1rem 0;
   padding: 0.85em 1em;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-family: inherit;
@@ -36,4 +44,7 @@ body {
   line-height: 1;
   text-align: center;
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }

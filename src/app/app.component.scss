@@ -1,18 +1,19 @@
 :host {
   display: grid;
-
+  overflow: hidden;
   min-height: 100vh;
-  background-color: #003d5a;
-
+  background-color: #007f96;
+  background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   grid-template-columns: 100vw;
-  grid-template-rows: 1fr 40px;
+  grid-template-rows: 1fr 80px;
 
   color: #f8f8ff;
 }
 
 main {
   max-width: 1000px;
-  width: 1000px;
+  width: 93vw;
   margin: 0 auto;
 }
 
@@ -30,6 +31,6 @@ main {
     margin-right: 10px;
   }
   .title-ram-dass {
-    font-size: 2em;
+    font-size: 58px;
   }
 }

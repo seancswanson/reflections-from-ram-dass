@@ -22,9 +22,10 @@ export class HomeComponent implements OnInit {
   constructor(private quoteService: QuoteService) {}
 
   ngOnInit() {
-    const allQuotes$ = this.quoteService
-      .getAllQuotes()
-      .subscribe((res) => (this.allQuotes = res));
+    const allQuotes$ = this.quoteService.getAllQuotes().subscribe((res) => {
+      this.allQuotes = res;
+      this.displayedQuote = this.allQuotes[this.getRandomIndex(this.allQuotes)];
+    });
     this.categorySentencePrefix = this.categorySentencePrefixes[
       this.getRandomIndex(this.categorySentencePrefixes)
     ];
