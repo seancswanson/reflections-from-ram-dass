@@ -1,1 +1,45 @@
 <h1>How It's Made</h1>
+<p>This web app utilizes the following web technologies:</p>
+<div class="technology-container">
+  <div class="technology-wrapper" *ngFor="let tech of technologiesUsed">
+    <a
+      [href]="tech.resourceUrl"
+      [style.background-image]="'url(' + tech.iconUrl + ')'"
+    ></a>
+  </div>
+</div>
+<em class="icon-source"
+  >Technology icons sourced from
+  <a href="https://devicon.dev/" class="light-link">https://devicon.dev/</a></em
+>
+
+<div class="tech-text-wrapper">
+  <p>The front end is an Angular app that is being served by GitHub pages.</p>
+  <p>
+    The quotes are fetched from a Node.js/Express REST API that I created and is
+    hosted by Heroku at
+    <a href="https://ram-dass-quotes-api.herokuapp.com/" class="light-link"
+      >https://ram-dass-quotes-api.herokuapp.com/</a
+    >. The GitHub pages for the Angular application and for the REST API can be
+    found
+    <a
+      href="https://github.com/seanthaswan/reflections-with-ram-dass"
+      class="light-link"
+      >HERE</a
+    >
+    and
+    <a
+      href="https://github.com/seanthaswan/ram-dass-quotes-api"
+      class="light-link"
+      >HERE</a
+    >, respectively.
+  </p>
+  <p>
+    If you would like to contribute a quote to the collection, please submit a
+    pull request to the REST API with the quote's category, text, and the source
+    of it.
+  </p>
+</div>
+<div class="return-button-wrapper">
+  <a class="button" [routerLink]="['/information']">Return</a>
+</div>

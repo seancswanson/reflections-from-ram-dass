@@ -13,13 +13,24 @@
 
 main {
   max-width: 1000px;
-  width: 93vw;
+  width: 98vw;
   margin: 0 auto;
 }
-
+.title-wrapper {
+  position: relative;
+  padding: 0 15px;
+}
+.lotus-icon {
+  position: absolute;
+  left: 160px;
+  width: 40px;
+  z-index: 1;
+  top: -19px;
+}
 .title-top {
   margin-bottom: 5px;
 }
+
 .title-bottom {
   display: flex;
   margin-top: 0;

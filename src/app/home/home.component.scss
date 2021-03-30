@@ -1,11 +1,12 @@
 .result-container {
   font-size: 36px;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin-bottom: 10px;
 }
 .result-category-wrapper {
 }
@@ -36,19 +37,17 @@
   position: absolute;
   top: 50px;
   text-align: right;
-  width: 93vw;
+  width: 98vw;
   max-width: 1000px;
-  @media (max-width: 620px) {
+  @media (max-width: 630px) {
     position: initial;
     text-align: center;
     width: 100%;
-    margin-bottom: 40px;
   }
 }
 
 button {
-  @media (max-width: 620px) {
-    width: 90%;
-    margin: 0 auto;
+  @media (max-width: 630px) {
+    width: 100%;
   }
 }

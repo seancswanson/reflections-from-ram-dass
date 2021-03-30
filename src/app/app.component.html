@@ -1,11 +1,23 @@
 <app-header></app-header>
-
 <main>
-  <h1 class="title-top">Reflections</h1>
-  <h1 class="title-bottom">
-    <em class="title-from">from</em>
-    <span class="title-ram-dass">Ram Dass</span>
-  </h1>
+  <div class="title-wrapper">
+    <img
+      class="lotus-icon"
+      src="../assets/PikPng.com_lotus-flower-png_462754.png"
+      alt="Lotus Flower Simple"
+    />
+    <h1 class="title-top">
+      <a [routerLink]="['/']" class="plain-link">Reflections</a>
+    </h1>
+    <h1 class="title-bottom">
+      <em class="title-from"
+        ><a [routerLink]="['/']" class="plain-link">from</a></em
+      >
+      <span class="title-ram-dass"
+        ><a [routerLink]="['/']" class="plain-link">Ram Dass</a></span
+      >
+    </h1>
+  </div>
 
   <router-outlet></router-outlet>
 </main>

@@ -74,25 +74,3 @@
     }
   }
 }
-
-.return-button-wrapper {
-  position: absolute;
-  top: 50px;
-  text-align: right;
-  width: 93vw;
-  max-width: 1000px;
-
-  @media (max-width: 550px) {
-    position: initial;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 40px;
-  }
-}
-
-.button {
-  @media (max-width: 550px) {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
