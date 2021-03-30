@@ -11,7 +11,6 @@ export class QuoteService {
 
   constructor(private http: HttpClient) {
     this.http = http;
-    console.log("Quote Service!");
   }
 
   getAllQuotes(): Observable<Quote[]> {

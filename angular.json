@@ -122,8 +122,13 @@
               "devServerTarget": "reflections-with-ram-dass:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "reflections-with-ram-dass"
 }
