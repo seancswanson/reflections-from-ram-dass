@@ -1,49 +1,71 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-size: 24px;
+:host
+{
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
 }
 
-.technology-container {
-  display: flex;
-  width: 75%;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  text-align: center;
-  @media (max-width: 400px) {
-    width: 100%;
-  }
+.technology-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    width: 75%;
+
+    text-align: center;
+    @media (max-width: 400px)
+    {
+        width: 100%;
+    }
 }
 
-.tech-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  padding: 10px;
-  font-size: 24px;
+.tech-text-wrapper
+{
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 15px;
+    padding: 10px;
 }
 
-.technology-wrapper {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-  background: white;
-  border: 1px dotted rgba(255, 255, 255, 0.3);
-  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
-    rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px;
+.technology-wrapper
+{
+    display: flex;
 
-  a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+    transition: transform .2s linear;
+
+    border: 1px dotted rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    background: white;
+    box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0 30px 60px -30px, rgb(10 37 64 / 35%) 0 -2px 6px;
+    a
+    {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+        margin: auto;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65%;
+    }
+
+    &:hover
+    {
+        transform: translate(0, -3px);
+    }
 }
