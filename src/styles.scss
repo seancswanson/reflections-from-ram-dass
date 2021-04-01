@@ -1,75 +1,99 @@
-@import "~normalize.css";
+@import '~normalize.css';
 
-@font-face {
-  font-family: "NewAthenaUnicode";
-  font-weight: normal;
-  font-style: normal;
+@font-face
+{
+    font-family: 'NewAthenaUnicode';
+    font-weight: normal;
+    font-style: normal;
 
-  src: url("./assets/fonts/NewAthenaUnicode.ttf.woff") format("woff"),
-    url("./assets/fonts/NewAthenaUnicode.ttf.svg") format("svg"),
-    url("./assets/fonts/NewAthenaUnicode.ttf.eot"),
-    url("./assets/fonts/NewAthenaUnicode.ttf.eot?#iefix")
-      format("embedded-opentype");
+    src: url('./assets/fonts/NewAthenaUnicode.ttf.woff') format('woff'),
+    url('./assets/fonts/NewAthenaUnicode.ttf.svg') format('svg'),
+    url('./assets/fonts/NewAthenaUnicode.ttf.eot'),
+    url('./assets/fonts/NewAthenaUnicode.ttf.eot?#iefix')
+    format('embedded-opentype');
 }
 
-html {
-  background-color: #007f96;
+html
+{
+    background-color: #007f96;
 }
 
-body {
-  font-family: "NewAthenaUnicode";
+body
+{
+    font-family: 'NewAthenaUnicode';
 
-  height: 100%;
+    height: 100%;
 }
 
-.plain-link {
-  color: #f8f8ff;
-  text-decoration: none;
+.plain-link
+{
+    text-decoration: none;
+
+    color: #f8f8ff;
 }
 
-.light-link {
-  color: #f8f8ff;
+.light-link
+{
+    color: #f8f8ff;
 }
 
-.return-button-wrapper {
-  position: absolute;
-  top: 50px;
-  text-align: right;
-  width: 93vw;
-  max-width: 1000px;
+.return-button-wrapper
+{
+    position: absolute;
+    top: 50px;
 
-  @media (max-width: 550px) {
-    position: initial;
+    width: 93vw;
+    max-width: 1000px;
+
+    text-align: right;
+
+    @media (max-width: 550px)
+    {
+        position: initial;
+
+        width: 100%;
+        margin-bottom: 40px;
+
+        text-align: center;
+    }
+}
+
+.button
+{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+
+    display: inline-block;
+
+    margin: 0 0 1rem 0;
+    padding: .85em 1em;
+
+    cursor: pointer;
+    -webkit-transition: background-color .25s ease-out, color .25s ease-out;
+            transition: background-color .25s ease-out, color .25s ease-out;
     text-align: center;
-    width: 100%;
-    margin-bottom: 40px;
-  }
+    vertical-align: middle;
+
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    background-color: #007f96;
+    box-shadow: rgba(50, 50, 93, .25) 0 50px 100px -20px,
+    rgba(0, 0, 0, .3) 0 30px 60px -30px,
+    rgba(10, 37, 64, .35) 0 -2px 6px 0 inset;
+
+    -webkit-appearance: none;
+
+    @media (max-width: 550px)
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
-.button {
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #007f96;
-  color: #ffffff;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-family: inherit;
-  -webkit-appearance: none;
-  line-height: 1;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
-  @media (max-width: 550px) {
-    width: 80%;
-    margin: 0 auto;
-  }
+h1
+{
+    text-shadow: 2px 4px 4px rgb(0 0 0 / 10%), 0 -5px 10px rgb(255 255 255 / 8%);
 }

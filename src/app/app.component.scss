@@ -1,48 +1,110 @@
-:host {
-  display: grid;
-  overflow: hidden;
-  min-height: 100vh;
-  background-color: #007f96;
-  background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  grid-template-columns: 100vw;
-  grid-template-rows: 1fr 80px;
+:host
+{
+    display: grid;
+    overflow: hidden;
 
-  color: #f8f8ff;
-}
+    min-height: 100vh;
 
-main {
-  max-width: 1000px;
-  width: 98vw;
-  margin: 0 auto;
-}
-.title-wrapper {
-  position: relative;
-  padding: 0 15px;
-}
-.lotus-icon {
-  position: absolute;
-  left: 160px;
-  width: 120px;
-  z-index: 1;
-  top: -19px;
-  opacity: 0.6;
-}
-.title-top {
-  margin-bottom: 5px;
+    color: #f8f8ff;
+    background-color: #007f96;
+    background-image: url('https://www.transparenttextures.com/patterns/broken-noise.png');
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 80px;
 }
 
-.title-bottom {
-  display: flex;
-  margin-top: 0;
+main
+{
+    width: 98vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-  .title-from {
-    font-family: "Homemade Apple", cursive;
-    font-size: 0.9em;
-    min-width: 80px;
-    margin-right: 10px;
-  }
-  .title-ram-dass {
-    font-size: 58px;
-  }
+.title-wrapper
+{
+    position: relative;
+    z-index: 999;
+
+    margin-bottom: 15px;
+    padding: 0 20px;
+
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+
+    border-bottom: 1px dotted rgba(255, 255, 255, .3);
+    @media (max-width: 630px)
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        text-align: center;
+        pointer-events: initial;
+    }
+}
+
+.hanuman-icon
+{
+    position: absolute;
+    z-index: -1;
+    top: -6px;
+    left: 151px;
+
+    width: 170px;
+    padding: 4px;
+
+    transition: all .1s linear;
+
+    opacity: .7;
+    background-color: #007f96;
+    background-image: url('https://www.transparenttextures.com/patterns/binding-dark.png');
+    box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px, rgb(0 0 0 / 30%) 0 30px 60px -30px, rgb(10 37 64 / 35%) 0 -2px 6px 0 inset;
+    @media (max-width: 630px)
+    {
+        top: 5px;
+        left: 5px;
+
+        width: 130px;
+
+        opacity: .8;
+    }
+}
+
+.title-top
+{
+    margin-bottom: 5px;
+
+    transition: all .2s ease-in-out;
+
+    @media (max-width: 630px)
+    {
+        font-size: 3.3em;
+    }
+}
+
+.title-bottom
+{
+    display: flex;
+
+    margin-top: 0;
+
+    @media (max-width: 365px)
+    {
+        flex-direction: column;
+    }
+
+    .title-from
+    {
+        font-family: 'Homemade Apple', cursive;
+        font-size: .9em;
+
+        min-width: 80px;
+        margin-right: 10px;
+    }
+
+    .title-ram-dass
+    {
+        font-size: 58px;
+    }
 }

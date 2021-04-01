@@ -1,53 +1,71 @@
-.result-container {
-  font-size: 36px;
-  border-radius: 5px;
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  margin-bottom: 10px;
+.result-container
+{
+    font-size: 36px;
+
+    margin-bottom: 10px;
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, .25) 0 50px 100px -20px,
+    rgba(0, 0, 0, .3) 0 30px 60px -30px,
+    rgba(10, 37, 64, .35) 0 -2px 6px 0 inset;
 }
-.result-category-wrapper {
+
+.result-category
+{
+    font-family: 'Homemade Apple', cursive;
 }
-.result-category {
-  font-family: "Homemade Apple", cursive;
-}
-.result-quote-card-wrapper {
-  .text {
-    position: relative;
-    .smart-quote {
-      position: absolute;
-      font-size: 60px;
-      font-family: "Homemade Apple", cursive;
-      opacity: 0.7;
-      &.left {
-        top: -25px;
-        left: -25px;
-      }
-      &.right {
-        bottom: -70px;
-        right: -20px;
-      }
+.result-quote-card-wrapper
+{
+    .text
+    {
+        position: relative;
+        .smart-quote
+        {
+            font-family: 'Homemade Apple', cursive;
+            font-size: 60px;
+
+            position: absolute;
+
+            opacity: .7;
+            &.left
+            {
+                top: -25px;
+                left: -25px;
+            }
+            &.right
+            {
+                right: -20px;
+                bottom: -70px;
+            }
+        }
     }
-  }
 }
 
-.quote-button-wrapper {
-  position: absolute;
-  top: 50px;
-  text-align: right;
-  width: 98vw;
-  max-width: 1000px;
-  @media (max-width: 630px) {
-    position: initial;
-    text-align: center;
-    width: 100%;
-  }
+.quote-button-wrapper
+{
+    position: absolute;
+    top: 50px;
+
+    width: 98vw;
+    max-width: 1000px;
+
+    text-align: right;
+    @media (max-width: 630px)
+    {
+        position: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }
 }
 
-button {
-  @media (max-width: 630px) {
-    width: 100%;
-  }
+button
+{
+    @media (max-width: 630px)
+    {
+        width: 100%;
+    }
 }
