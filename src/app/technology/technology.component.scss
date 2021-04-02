@@ -44,8 +44,6 @@
     margin-right: 5px;
     margin-bottom: 10px;
 
-    transition: transform .2s linear;
-
     border: 1px dotted rgba(255, 255, 255, .3);
     border-radius: 5px;
     background: white;
@@ -62,10 +60,5 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 65%;
-    }
-
-    &:hover
-    {
-        transform: translate(0, -3px);
     }
 }

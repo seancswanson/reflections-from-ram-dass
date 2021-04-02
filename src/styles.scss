@@ -97,3 +97,13 @@ h1
 {
     text-shadow: 2px 4px 4px rgb(0 0 0 / 10%), 0 -5px 10px rgb(255 255 255 / 8%);
 }
+
+.float-with-hover
+{
+    transition: transform .2s linear;
+
+    &:hover
+    {
+        transform: translate(0, -3px);
+    }
+}

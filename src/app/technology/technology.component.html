@@ -1,7 +1,7 @@
 <h1>How It's Made</h1>
 <p>This web app utilizes the following web technologies:</p>
 <div class="technology-container">
-  <div class="technology-wrapper" *ngFor="let tech of technologiesUsed">
+  <div class="technology-wrapper float-with-hover" *ngFor="let tech of technologiesUsed">
     <a
       [href]="tech.resourceUrl"
       [style.background-image]="'url(' + tech.iconUrl + ')'"
