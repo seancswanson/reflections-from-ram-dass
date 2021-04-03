@@ -14,7 +14,7 @@ export class QuoteService {
   }
 
   getAllQuotes(): Observable<Quote[]> {
-    const endpoint = "/all";
+    const endpoint = "/quotes/all";
     const quotes$ = this.http.get<Quote[]>(this.apiURL + endpoint, {
       headers: new HttpHeaders({
         "Access-Control-Allow-Origin": "*",

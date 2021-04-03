@@ -16,12 +16,20 @@
     justify-content: space-evenly;
 
     width: 75%;
+    margin-bottom: 30px;
 
     text-align: center;
     @media (max-width: 400px)
     {
         width: 100%;
     }
+}
+
+.icon-source
+{
+    font-size: 14px;
+
+    opacity: .5;
 }
 
 .tech-text-wrapper

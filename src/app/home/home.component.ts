@@ -10,6 +10,8 @@ import { Quote } from "./quote.interface";
 export class HomeComponent implements OnInit {
   allQuotes: Quote[];
   displayedQuote: Quote;
+  availableCategories: String[] = [];
+  categoriesShown = false;
   categorySentencePrefixes = [
     "In regards to",
     "On",
@@ -25,18 +27,36 @@ export class HomeComponent implements OnInit {
     const allQuotes$ = this.quoteService.getAllQuotes().subscribe((res) => {
       this.allQuotes = res;
       this.displayedQuote = this.allQuotes[this.getRandomIndex(this.allQuotes)];
+      res.map((quote) => {
+        if (this.availableCategories.indexOf(quote.category) === -1) {
+         this.availableCategories.push(quote.category);
+       }
+      })
     });
     this.categorySentencePrefix = this.categorySentencePrefixes[
       this.getRandomIndex(this.categorySentencePrefixes)
     ];
   }
 
-  getQuoteClickHandler(selectedCategory) {
-    const filteredQuotes = this.allQuotes.filter(
-      (quote) => quote.category === selectedCategory
-    );
-    const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
-    this.displayedQuote = filteredQuotes[randomIndex];
+  getQuoteClickHandler() {
+    this.categoriesShown = !this.categoriesShown;
+  }
+
+  getQuoteByCategory(selectedCategory) {
+    this.categoriesShown = !this.categoriesShown;
+
+    if (selectedCategory) {
+      const filteredQuotes = this.allQuotes.filter(
+        (quote) => quote.category === selectedCategory
+      );
+      const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
+      this.displayedQuote = filteredQuotes[randomIndex];
+
+    } else {
+      const randomIndex = Math.floor(Math.random() * this.allQuotes.length);
+      this.displayedQuote = this.allQuotes[randomIndex]
+    }
+
   }
 
   getRandomIndex(arr?) {

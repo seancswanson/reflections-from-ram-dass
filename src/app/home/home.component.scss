@@ -1,3 +1,12 @@
+:host
+{
+    display: block;
+
+    padding-top: 25px;
+
+    border-top: 1px dotted rgba(255, 255, 255, .3);
+}
+
 .result-container
 {
     font-size: 36px;
@@ -7,9 +16,11 @@
 
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 5px;
+    background-color: #006e82;
+    background-image: url('https://www.transparenttextures.com/patterns/binding-dark.png');
+    // background-image: url('https://www.transparenttextures.com/patterns/broken-noise.png');
     box-shadow: rgba(50, 50, 93, .25) 0 50px 100px -20px,
-    rgba(0, 0, 0, .3) 0 30px 60px -30px,
-    rgba(10, 37, 64, .35) 0 -2px 6px 0 inset;
+    rgba(0, 0, 0, .3) 0 30px 60px -30px;
 }
 
 .result-category
@@ -52,6 +63,14 @@
     max-width: 1000px;
 
     text-align: right;
+
+    .down-arrow
+    {
+        font-size: 12px;
+
+        margin-left: 2px;
+    }
+
     @media (max-width: 630px)
     {
         position: initial;
@@ -59,6 +78,74 @@
         width: 100%;
 
         text-align: center;
+    }
+}
+
+.categories-container
+{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    width: 210px;
+    height: auto;
+    max-height: 0;
+    margin-left: auto;
+
+    transition: max-height .3s linear, opacity .2s linear;
+    text-align: center;
+
+    opacity: 0;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    background-color: #007f96;
+    box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px, rgb(0 0 0 / 30%) 0 30px 60px -30px, rgb(10 37 64 / 35%) 0 -2px 6px 0 inset;
+
+    -webkit-appearance: none;
+
+    &.expanded
+    {
+        overflow: hidden;
+
+        max-height: 1000px;
+
+        opacity: 1;
+
+        .category-wrapper
+        {
+            opacity: 1;
+        }
+    }
+
+    .category-wrapper
+    {
+        padding: .85em 1em;
+
+        cursor: pointer;
+        transition: background-color .3s ease, opacity .3s ease;
+        text-transform: capitalize;
+
+        opacity: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        &:last-of-type
+        {
+            border-bottom: none;
+        }
+        &:hover
+        {
+            background-color: #006f82;
+        }
+    }
+
+    @media (max-width: 630px)
+    {
+        width: 100%;
     }
 }
 

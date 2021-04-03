@@ -15,7 +15,7 @@
 
 html
 {
-    background-color: #007f96;
+    background-color: #000;
 }
 
 body
@@ -23,6 +23,9 @@ body
     font-family: 'NewAthenaUnicode';
 
     height: 100%;
+    // background-image: linear-gradient(#007388, #00a8c7, #00b4d4, #006273);
+
+    background-image: linear-gradient(rgb(2 159 187), rgb(4 176 208),rgb(0 216 255), rgb(255 255 255));
 }
 
 .plain-link
@@ -89,7 +92,7 @@ body
     @media (max-width: 550px)
     {
         width: 80%;
-        margin: 0 auto;
+        margin: 10px auto;
     }
 }
 
