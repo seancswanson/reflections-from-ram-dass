@@ -13,11 +13,11 @@
   </div>
 </div>
 <div class="quote-button-wrapper">
-  <button class="button" (click)="getQuoteClickHandler('inspiration')" tabindex="1">
+  <button class="button" (click)="getQuoteClickHandler()" tabindex="1">
     Get Another Ram Dass Quote <span class="down-arrow">▾</span>
   </button>
   <div class="categories-container" [ngClass]="{'expanded': this.categoriesShown}">
-    <div class="category-wrapper" tabindex="2" (click)="getQuoteByCategory()">Random</div>
+    <div class="category-wrapper" tabindex="2" (click)="getQuoteByCategory(null)">Random</div>
     <div class="category-wrapper" *ngFor="let category of availableCategories; let i = index" [attr.tabindex]="i + 3" (click)="getQuoteByCategory(category)">     {{ getCategorySentencePrefix() }} {{category}}</div>
   </div>
 </div>

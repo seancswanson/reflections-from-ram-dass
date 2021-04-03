@@ -6,8 +6,7 @@ import { Quote } from "../home/quote.interface";
   providedIn: "root",
 })
 export class QuoteService {
-  // apiURL: string = 'https://ram-dass-quotes-api.herokuapp.com/api';
-  apiURL: string = "http://localhost:3000/api";
+  apiURL: string = 'https://ram-dass-quotes-api.herokuapp.com/api';
 
   constructor(private http: HttpClient) {
     this.http = http;
